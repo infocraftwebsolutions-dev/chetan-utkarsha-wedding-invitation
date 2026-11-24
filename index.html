@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Chetan &amp; Utkarsha — Wedding Celebration</title>
+  <meta name="description"
+    content="Join us as we celebrate our wedding. 04 &amp; 05 December 2026 · New Ghadge Lawns (Dugaon Phata), Nashik" />
+  <meta property="og:title" content="Chetan &amp; Utkarsha — 05 December 2026" />
+  <meta property="og:description"
+    content="With love and blessings, we invite you to our Haldi &amp; Wedding celebration at New Ghadge Lawns, Nashik." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/illust_couple_1.jpg" />
+  <link rel="icon"
+    href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🌸&lt;/text&gt;&lt;/svg&gt;" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Satisfy&family=Tenor+Sans&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- BACKGROUND FLUTE MUSIC & FLOATING AUDIO CONTROL -->
+  <audio id="bg-flute-audio" src="assets/flute_music.mp3" loop preload="auto" playsinline></audio>
+  <button id="audio-btn" type="button" title="Toggle music" aria-label="Toggle music">
+    <svg id="icon-unmuted" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z">
+      </path>
+    </svg>
+    <svg id="icon-muted" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"
+      style="display:none">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z">
+      </path>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path>
+    </svg>
+  </button>
+
+  <!-- SOFT FALLING BLUSH & GOLD PETALS CANVAS + CONFETTI CANVAS -->
+  <canvas id="petals-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ===================================================================
+       SECTION 0: TAP-TO-OPEN 3D ENVELOPE VIDEO GATE (#entry-gate)
+       =================================================================== -->
+  <div id="entry-gate" class="entry-gate--type1 entry-overlay--dark entry-gate--ready" role="button" tabindex="0"
+    aria-label="Tap to Open">
+    <video id="entry-video" playsinline preload="auto" muted>
+      <source src="assets/entry_envelope.mp4#t=0.001" type="video/mp4" />
+    </video>
+    <div id="entry-tap-hint" class="entry-gate-tap-hint">
+      Tap to Open
+    </div>
+    <div id="entry-welcome-msg" class="entry-gate-message">
+      <span class="entry-gate-sub">With love and blessings, we invite you to the wedding of</span>
+      <span class="entry-gate-couple">Chetan &amp; Utkarsha</span>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MAIN LIGHT-THEME INVITATION CONTENT (#main-content)
+       =================================================================== -->
+  <div id="main-content">
+
+    <!-- SECTION 1: HERO SECTION (#hero) -->
+    <section id="hero">
+      <div class="hero-corner"><span></span></div>
+
+      <div class="hero-card reveal">
+        <div class="reveal reveal-d1">
+          <img src="assets/ganesh_gold.png" alt="Lord Ganesha" class="hero-icon ganesha-icon" width="100"
+            height="100" />
+        </div>
+
+        <p class="god-quote reveal reveal-d2">|| Shree Ganeshaya Namah ||
+          || Shree Vishwakarmaya Namah || · || Shree Kulswamini Prasanna || · || Shree Yogeshwari Prasanna ||</p>
+
+        <p class="intro-text reveal reveal-d3">With the divine blessings of our families, we joyfully request your
+          gracious presence at the wedding ceremony of</p>
+
+        <!-- GROOM & PARENTS DETAILS -->
+        <div class="hero-couple-partner reveal reveal-d4">
+          <div class="couple-block couple-block--highlighted">
+            <span class="couple-role-badge">✦ The Groom ✦</span>
+            <span class="couple-name shimmer">Chetan</span>
+            <span class="parent-sub">Eldest Son of Sau. Sandesha &amp; Shri. Govinda Namdevji Deshman (Manegaon)
+              Nephew of Shri. Devidas &amp; Shri. Sankalp Vishwanath Jadhav (Dugaon)</span>
+          </div>
+        </div>
+
+        <!-- BRIDE & PARENTS DETAILS -->
+        <div class="hero-couple-partner reveal reveal-d5">
+          <div class="amp-row">
+            <div class="amp-line"></div>
+            <span class="amp">&amp;</span>
+            <div class="amp-line"></div>
+          </div>
+          <div class="couple-block couple-block--highlighted">
+            <span class="couple-role-badge">✦ The Bride ✦</span>
+            <span class="couple-name shimmer">Utkarsha</span>
+            <span class="parent-sub">Eldest Daughter of Sau. Nutan &amp; Shri. Nitin Vishwanath Jadhav (Dugaon)
+              Niece of Shri. Ajit &amp; Shri. Swapnil Shantaram Sasane (Dingore)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" id="hero-scroll-btn" role="button" tabindex="0">
+        <span>Scroll to Reveal</span>
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE SCRATCH-TO-REVEAL DATE (#scratch-section) -->
+    <section id="scratch-section" class="reveal">
+      <span class="sec-label">The Date</span>
+      <h2 class="sec-heading">Save the Date</h2>
+      <p class="scratch-instruction" id="scratch-instruction">
+        <span class="scratch-instruction-icon">✨</span>
+        <span>Tap or Scratch all 3 cards below to reveal our wedding date</span>
+        <span class="scratch-instruction-icon">✨</span>
+      </p>
+
+      <div class="scratch-row" id="scratch-row">
+        <div class="scratch-unit">
+          <span class="scratch-lbl">Month</span>
+          <div class="scratch-card" data-scratch-card role="button" tabindex="0"
+            aria-label="Tap or scratch to reveal month">
+            <div class="scratch-inner">
+              <div class="sc-val">Dec</div>
+              <div class="sc-rule"></div>
+            </div>
+            <canvas class="scratch-canvas"></canvas>
+          </div>
+          <span class="scratch-hint">👆 Tap / Scratch</span>
+        </div>
+
+        <div class="scratch-unit">
+          <span class="scratch-lbl">Day</span>
+          <div class="scratch-card" data-scratch-card role="button" tabindex="0"
+            aria-label="Tap or scratch to reveal day">
+            <div class="scratch-inner">
+              <div class="sc-val">05</div>
+              <div class="sc-rule"></div>
+            </div>
+            <canvas class="scratch-canvas"></canvas>
+          </div>
+          <span class="scratch-hint">👆 Tap / Scratch</span>
+        </div>
+
+        <div class="scratch-unit">
+          <span class="scratch-lbl">Year</span>
+          <div class="scratch-card" data-scratch-card role="button" tabindex="0"
+            aria-label="Tap or scratch to reveal year">
+            <div class="scratch-inner">
+              <div class="sc-val">2026</div>
+              <div class="sc-rule"></div>
+            </div>
+            <canvas class="scratch-canvas"></canvas>
+          </div>
+          <span class="scratch-hint">👆 Tap / Scratch</span>
+        </div>
+      </div>
+
+      <div class="scratch-gate-notice" id="scratch-gate-notice" role="status" aria-live="polite">
+        <span class="scratch-gate-icon" id="scratch-gate-icon">🔒</span>
+        <span class="scratch-gate-text" id="scratch-gate-text">Tap all 3 date cards above to reveal the date &amp;
+          unlock the invitation</span>
+      </div>
+    </section>
+
+    <!-- SECTION 3: LIVE COUNTDOWN (#countdown-section) -->
+    <section id="countdown-section" class="reveal">
+      <div class="cd-card">
+        <p class="cd-quote">A lifetime of togetherness begins with one sacred step</p>
+        <span class="cd-script">The Wedding</span>
+        <span class="cd-date">05 · 12 · 2026 · 12:35 PM</span>
+
+        <div class="cd-grid">
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-days">00</span>
+            <span class="cd-lbl">Days</span>
+          </div>
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-hours">00</span>
+            <span class="cd-lbl">Hours</span>
+          </div>
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-mins">00</span>
+            <span class="cd-lbl">Mins</span>
+          </div>
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-secs">00</span>
+            <span class="cd-lbl">Secs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: SCROLL-DRIVEN STACKING POLAROID GALLERY (#story-section) -->
+    <section id="story-section" style="height: calc(var(--stable-vh) * 2.2);">
+      <div class="story-sticky">
+        <div class="story-text">
+          <span class="sec-label">Our Journey</span>
+          <h2 class="sec-heading">Forever Us</h2>
+          <span class="story-chapter" id="polaroid-chapter">Written in the Stars</span>
+          <p class="story-p" id="polaroid-desc">Two souls, one sacred bond — blessed by love and family.</p>
+          <div class="ls-progress-dots" id="polaroid-dots">
+            <span class="ls-progress-dot active" data-idx="0"></span>
+            <span class="ls-progress-dot" data-idx="1"></span>
+          </div>
+        </div>
+
+        <div class="ls-stack" id="polaroid-stack">
+          <div class="ls-card visible" style="--r: -2.4deg; z-index: 1;" data-chapter="Written in the Stars"
+            data-desc="Two souls, one sacred bond — blessed by love and family.">
+            <img src="assets/illust_couple_1.jpg" alt="Chetan &amp; Utkarsha" />
+            <div class="ls-caption"><span>Chetan &amp; Utkarsha</span></div>
+          </div>
+
+          <div class="ls-card" style="--r: 2.8deg; z-index: 2;" data-chapter="Hand in Hand"
+            data-desc="Side by side through every season of life, stepping into our forever.">
+            <img src="assets/illust_couple_3.jpg" alt="Chetan &amp; Utkarsha" />
+            <div class="ls-caption"><span>Forever Us</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: ANIMATED CARTOONISH EVENT CARDS + SEAMLESS CURVED TIMELINE (#events-section) -->
+    <section id="events-section">
+      <div class="tc reveal" style="margin-bottom: 2.5rem;">
+        <span class="sec-label">Celebrations</span>
+        <h2 class="sec-heading">Events &amp; Schedule</h2>
+      </div>
+
+      <!-- EVENT CARD 1: HALDI CEREMONY -->
+      <div class="event-block reveal reveal-d1">
+        <div class="event-invite-frame event-invite--light">
+          <img src="assets/event_haldi.webp" alt="" class="event-invite-bg" />
+          <video class="event-invite-bg" src="assets/event_haldi.mp4" autoplay muted loop playsinline
+            preload="auto"></video>
+          <div class="event-invite-overlay">
+            <div class="event-invite-stack">
+              <h3 class="event-invite-title">Haldi Ceremony</h3>
+              <div class="event-date-row">
+                <span>Friday</span>
+                <span class="event-date-bar">|</span>
+                <span class="event-date-num">04</span>
+                <span class="event-date-bar">|</span>
+                <span>Dec 2026</span>
+              </div>
+              <p class="event-invite-time">7:00 PM Onwards</p>
+            </div>
+          </div>
+        </div>
+        <div class="evt-details reveal reveal-d1">
+          <p class="evt-tagline" style="margin-bottom: 0;">An evening of golden turmeric blessings, marigold showers,
+            and festive joy.</p>
+        </div>
+      </div>
+
+      <!-- EVENT CARD 2: WEDDING CEREMONY (SHUBH VIVAH) -->
+      <div class="event-block reveal reveal-d2">
+        <div class="event-invite-frame event-invite--arch">
+          <img src="assets/event_wedding.webp" alt="" class="event-invite-bg" />
+          <video class="event-invite-bg" src="assets/event_wedding.mp4" autoplay muted loop playsinline
+            preload="auto"></video>
+          <div class="event-invite-overlay">
+            <div class="event-invite-stack">
+              <h3 class="event-invite-title">Wedding Ceremony</h3>
+              <div class="event-date-row">
+                <span>Saturday</span>
+                <span class="event-date-bar">|</span>
+                <span class="event-date-num">05</span>
+                <span class="event-date-bar">|</span>
+                <span>Dec 2026</span>
+              </div>
+              <p class="event-invite-time">12:35 PM (Shubh Muhurtham)</p>
+            </div>
+          </div>
+        </div>
+        <div class="evt-details highlighted reveal reveal-d1">
+          <p class="evt-tagline" style="margin-bottom: 0;">Miti Kartik Krishna 12, Shake 1948 — Join us as we tie the
+            sacred knot on Saturday, 5th December 2026 at the auspicious muhurtham of 12:35 PM.</p>
+        </div>
+      </div>
+
+      <!-- SEAMLESS CURVED-WAVE DEEP ROSE TIMELINE WITH SCROLL-DRIVEN SPINNING LOTUS -->
+      <div class="timeline-section">
+        <div class="timeline-wave timeline-wave-top" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,64 C240,115 480,12 720,56 C960,100 1200,18 1440,64 L1440,120 L0,120 Z" fill="var(--sage-deep)">
+            </path>
+          </svg>
+        </div>
+
+        <div class="timeline-heading reveal">
+          <p class="section-eyebrow">The Celebrations Unfold</p>
+          <h2>The Timeline</h2>
+          <div class="timeline-flourish">
+            <svg width="100" height="14" viewBox="0 0 100 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 7H38M62 7H100" stroke="rgba(212, 175, 55, 0.55)" stroke-width="1"></path>
+              <circle cx="50" cy="7" r="3" fill="#D4AF37"></circle>
+              <circle cx="42" cy="7" r="1.5" fill="#E8CE73"></circle>
+              <circle cx="58" cy="7" r="1.5" fill="#E8CE73"></circle>
+            </svg>
+          </div>
+        </div>
+
+        <div class="timeline-wrap" id="timeline-wrap">
+          <div class="timeline-spine"></div>
+          <div class="timeline-flower" id="timeline-flower" aria-hidden="true">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <g fill="#F7DCDA" stroke="#D4AF37" stroke-width="0.8">
+                <ellipse cx="32" cy="14" rx="6" ry="10"></ellipse>
+                <ellipse cx="32" cy="50" rx="6" ry="10"></ellipse>
+                <ellipse cx="14" cy="32" rx="10" ry="6"></ellipse>
+                <ellipse cx="50" cy="32" rx="10" ry="6"></ellipse>
+                <ellipse cx="20" cy="20" rx="6" ry="9" transform="rotate(-45 20 20)"></ellipse>
+                <ellipse cx="44" cy="20" rx="6" ry="9" transform="rotate(45 44 20)"></ellipse>
+                <ellipse cx="20" cy="44" rx="6" ry="9" transform="rotate(45 20 44)"></ellipse>
+                <ellipse cx="44" cy="44" rx="6" ry="9" transform="rotate(-45 44 44)"></ellipse>
+              </g>
+              <circle cx="32" cy="32" r="6" fill="#E8CE73" stroke="#BA7A76" stroke-width="0.8"></circle>
+              <circle cx="32" cy="32" r="2.5" fill="#8A4F4C"></circle>
+            </svg>
+          </div>
+
+          <div class="timeline-day-block reveal">
+            <div class="day-marker">
+              <p class="day-label">DAY 1</p>
+              <p class="day-title">Haldi Ceremony</p>
+              <p class="day-date">4th December 2026</p>
+            </div>
+            <div class="timeline-row">
+              <div class="t-time"><span>7:00</span><small>PM</small></div>
+              <div class="t-dot"></div>
+              <div class="t-event">
+                <h4>Haldi Carnival</h4>
+                <p>Auspicious turmeric rituals &amp; festive evening celebration</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-day-block reveal">
+            <div class="day-marker">
+              <p class="day-label">DAY 2</p>
+              <p class="day-title">Wedding Ceremony</p>
+              <p class="day-date">5th December 2026</p>
+            </div>
+            <div class="timeline-row">
+              <div class="t-time"><span>12:35</span><small>PM</small></div>
+              <div class="t-dot"></div>
+              <div class="t-event">
+                <h4>Shubh Vivah &amp; Varmala</h4>
+                <p>Sacred wedding vows at the auspicious Shubh Muhurtham</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-wave timeline-wave-bottom" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,0 L1440,0 L1440,56 C1200,104 960,18 720,64 C480,110 240,14 0,56 Z" fill="var(--sage-deep)">
+            </path>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: SINGLE UNIFIED VENUE SECTION FOR BOTH HALDI & WEDDING (#venue-section) -->
+    <section id="venue-section">
+      <div class="tc reveal">
+        <span class="sec-label">Where We Gather</span>
+        <h2 class="sec-heading">Celebration Venue</h2>
+      </div>
+
+      <a class="venue-card venue-card-link reveal reveal-d1" href="https://maps.app.goo.gl/sKsBEkc1g43wwTbeA"
+        target="_blank" rel="noopener noreferrer" aria-label="View New Ghadge Lawns on Google Maps">
+        <div class="card-corner tl"></div>
+        <div class="card-corner tr"></div>
+        <div class="card-corner bl"></div>
+        <div class="card-corner br"></div>
+
+        <div class="venue-img-wrap">
+          <img src="assets/illust_couple_hands.jpg" alt="Celebration Venue" />
+        </div>
+
+        <span class="venue-events-badge">Haldi &amp; Wedding Ceremony Venue</span>
+        <p class="venue-name">New Ghadge Lawns (Dugaon Phata)</p>
+        <p class="venue-addr">Girnare Road, Dugaon, Tal. &amp; Dist. Nashik</p>
+
+        <span class="venue-btn">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          <span>Tap to View on Maps</span>
+        </span>
+      </a>
+    </section>
+
+    <!-- SECTION 7: DEEP VELVET-ROSE & GOLD FOOTER (#footer-section) -->
+    <section id="footer-section">
+      <div class="tc reveal">
+        <p class="footer-msg">We look forward to your gracious presence to bless the Groom and Bride on this auspicious
+          occasion.
+          Your love and blessings mean everything to us.</p>
+
+        <div style="margin-top: 2rem;">
+          <span class="footer-regards">With best compliments from,</span>
+          <span class="footer-subheading">Deshman Family</span>
+        </div>
+
+        <div class="footer-name">Chetan &amp; Utkarsha</div>
+
+        <div class="footer-contacts">
+          <span class="sec-label" style="color: var(--gold-light); font-size: 0.78rem; margin-bottom: 0.35rem;">For any
+            queries, please contact:</span>
+          <div class="footer-phone-row">
+            <a href="tel:9112638027" class="footer-phone-pill">📞 9112638027</a>
+            <a href="tel:9850148811" class="footer-phone-pill">📞 9850148811</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
